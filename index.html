@@ -1,39 +1,67 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reto DOM - Creador de Tarjetas</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<html lang="en">
 
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto DOM: Creador de Tarjetas Personalizadas</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
 
-      /* No añadas más estilos aquí - crea todo con JavaScript */
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <img
-          src="https://codigo.edu.pe/wp-content/uploads/2024/10/logotecsupnuevo.png"
-          alt="logo TECSUP"
-          width="200"
-        />
-      </nav>
-    </header>
-    <main>
-      <!-- Aquí debes insertar todo el contenido con JavaScript -->
-    </main>
-    <footer>
-      <p>Bootcamp Full Stack TECSUP</p>
-    </footer>
-    <script src="./app.js"></script>
-  </body>
+<body>
+    <section>
+        <h1>Tarjeta Personalizada</h1>
+    </section>
+    <section class="creadordeTarjetas">
+        <div class="tarjeta">
+            <form id="tarjeta-form">
+                <div class="input-div">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre"  required>
+                </div>
+                <div class="input-div">    
+                    <label for="profesion">Profesión/Cargo:</label>
+                    <input type="text" id="profesion" name="profesion" required>
+                </div>
+                <div class="input-div">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-div">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="input-div">
+                    <label for="color">Color de la tarjeta:</label>
+                    <input type="color" id="color" name="color">
+                </div>
+                <div class="buttons-div">
+                    <button class="button" type="reset">Restablecer</button>
+                    <button class="button" id="descargar-imagen">Descargar</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="tarjeta-preview" id="tarjeta-preview" style="position: relative; padding: 20px; border-radius: 10px;">
+            <h2 id="preview-nombre" style="font-weight: bold;">Nombre del Usuario</h2>
+            <p id="preview-profesion">Profesión/Cargo</p>
+            <p id="preview-contacto">
+            <span id="preview-email">Email: usuario@ejemplo.com</span><br>
+            <span id="preview-telefono">Teléfono: 123456789</span>
+            </p>
+            <div style="position: absolute; bottom: 10px; right: 10px; opacity: 0.2; font-size: 12px; font-weight: bold;">
+            TECSUP
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <script src="/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+</body>
+
 </html>
